@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">ListView App</string>
+    <string name="app_name">Flower List</string>
+
 
     <string-array name="flowers">
         <item>Rose</item>

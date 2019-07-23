@@ -10,19 +10,19 @@ import android.widget.TextView;
 
 public class CustomAdapter extends BaseAdapter {
 
-    int[] flowers;
+    int [] flowers;
     String [] flowerNames;
     Context context;
-    LayoutInflater inflater;
 
-    CustomAdapter(Context context,String[] flowerNames,int [] flowers){
+    LayoutInflater layoutInflater;
+
+    CustomAdapter(Context context,String[] flowerNames,int [] flowers ){
+
         this.context=context;
         this.flowerNames=flowerNames;
         this.flowers=flowers;
 
     }
-
-
 
     @Override
     public int getCount() {
@@ -43,11 +43,11 @@ public class CustomAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         if(view==null){
-            inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.sample_view,viewGroup,false);
+            layoutInflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = layoutInflater.inflate(R.layout.sample_view,viewGroup,false);
         }
 
-        ImageView imageView = view.findViewById(R.id.imageViewId);
+        ImageView imageView = view.findViewById(R.id.imageId);
         TextView textView = view.findViewById(R.id.flowerNameId);
 
         imageView.setImageResource(flowers[i]);

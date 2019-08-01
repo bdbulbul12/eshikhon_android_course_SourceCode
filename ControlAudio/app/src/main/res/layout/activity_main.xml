@@ -7,13 +7,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
     <TextView
         android:text="Music Player"
         android:textSize="30sp"
-        android:textStyle="bold"
         android:gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -23,16 +22,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <Button
             android:layout_weight="1"
             android:layout_marginTop="30dp"
             android:text="Play"
             android:onClick="play"
+            android:textStyle="bold"
             android:background="@color/colorAccent"
             android:textColor="#fff"
-            android:textStyle="bold"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <Button
@@ -40,24 +38,26 @@
             android:layout_marginTop="30dp"
             android:text="Pause"
             android:onClick="pause"
+            android:textStyle="bold"
             android:background="@color/colorPrimary"
             android:textColor="#fff"
-            android:textStyle="bold"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+
 
     </LinearLayout>
 
+
     <SeekBar
-        android:layout_marginTop="20dp"
         android:id="@+id/volume"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <SeekBar
-        android:outlineAmbientShadowColor="@color/colorAccent"
-        android:layout_marginTop="10dp"
         android:id="@+id/location"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

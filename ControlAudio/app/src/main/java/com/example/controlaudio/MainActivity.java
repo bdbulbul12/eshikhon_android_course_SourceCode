@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     MediaPlayer audioClip;
     AudioManager audioManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,20 +24,19 @@ public class MainActivity extends AppCompatActivity {
 
         audioClip = MediaPlayer.create(this,R.raw.alien);
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
         int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         int currVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 
-
         SeekBar volumeControl = findViewById(R.id.volume);
-
         volumeControl.setMax(maxVolume);
         volumeControl.setProgress(currVolume);
+
 
         volumeControl.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,i,0);
-
             }
 
             @Override
@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
 
         final SeekBar audioLocation = findViewById(R.id.location);
         audioLocation.setMax(audioClip.getDuration());
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         audioLocation.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                audioClip.seekTo(i);
+                    audioClip.seekTo(i);
             }
 
             @Override
@@ -77,17 +76,24 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
+
+
     }
+
 
     public void play(View view) {
 
         audioClip.start();
+
     }
 
     public void pause(View view) {
+
         audioClip.pause();
     }
-
-
-
 }

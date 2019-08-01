@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+    <CheckBox
+        android:id="@+id/pizzaId"
+        android:textSize="20sp"
+        android:text="Pizza"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:id="@+id/burgerId"
+        android:textSize="20sp"
+        android:text="Burger"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:id="@+id/sandwichId"
+        android:textSize="20sp"
+        android:text="Sandwich"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/orderId"
+        android:text="Order"
+        android:onClick="order"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/showOrder"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/maleId"
+            android:text="Male"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/femaleId"
+            android:text="Female"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/radio"
+        android:text="Show"
+        android:textSize="15sp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/showRadio"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
